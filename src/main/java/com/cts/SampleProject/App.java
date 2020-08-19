@@ -1,58 +1,46 @@
 package com.cts.SampleProject;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.io.File;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-
+import objectRepository.LoginPageFreeCRM;
 /**
  *Sample Project with all Selenium concepts
  *
  */
-public class App 
+public class App extends LoginPageFreeCRM
 {
-private static WebDriver driver;
 
 @BeforeClass
 public void browserOpen() throws AWTException
 {
-    	WebDriverManager.chromedriver().setup();
-    	ChromeOptions option=new ChromeOptions();
-    	//Open the browser in Incognito mode
-    	option.addArguments("--incognito");
-    	driver=new ChromeDriver(option);
-    	//Other method to open Incognito mode
-    	Robot r=new Robot();
-    	r.keyPress(KeyEvent.VK_CONTROL);
-    	r.keyPress(KeyEvent.VK_SHIFT);
-    	r.keyPress(KeyEvent.VK_N);
-    	r.keyRelease(KeyEvent.VK_CONTROL);
-    	r.keyRelease(KeyEvent.VK_SHIFT);
-    	r.keyRelease(KeyEvent.VK_N);
+//    	WebDriverManager.chromedriver().setup();
+//    	ChromeOptions option=new ChromeOptions();
+//    	//Open the browser in Incognito mode
+//    	option.addArguments("--incognito");
+//    	driver=new ChromeDriver(option);
     /**	//To add new extension
     	option.addExtensions(new File("/path/extension.crx"));
     	//To add Binary path
     	option.setBinary(new File("/path/chrome"));
     	//To Accept untrusted certificate
     	option.setAcceptInsecureCerts(false);
-    	
     **/
-    	driver.get("https://google.com");
+        getDriver();	
+    	driver.get("https://google.com");    
 }
 @Test
-public void test()
+public void test() throws InterruptedException
 {
-    	System.out.println( "Hello World!" );
-        System.out.println( "Hi Johnson" );
+	LoginPageFreeCRM login=new LoginPageFreeCRM();
+	login.getTxtSearch().sendKeys("Free CRM");
+	Thread.sleep(5000);
+	btnClick(login.getBtnClk());
+	Thread.sleep(5000);
+	validLink(login.getAllLink());
 }
 @AfterClass
 public void closeBrowser()

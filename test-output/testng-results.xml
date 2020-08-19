@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42325" started-at="2020-08-16T06:56:26Z" finished-at="2020-08-16T06:57:08Z">
+  <suite name="Default suite" duration-ms="30257" started-at="2020-08-19T11:28:22Z" finished-at="2020-08-19T11:28:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="42325" started-at="2020-08-16T06:56:26Z" finished-at="2020-08-16T06:57:08Z">
+    <test name="Default test" duration-ms="30257" started-at="2020-08-19T11:28:22Z" finished-at="2020-08-19T11:28:52Z">
       <class name="com.cts.SampleProject.App">
-        <test-method status="PASS" signature="browserOpen()[pri:0, instance:com.cts.SampleProject.App@4883b407]" name="browserOpen" is-config="true" duration-ms="42040" started-at="2020-08-16T06:56:26Z" finished-at="2020-08-16T06:57:08Z">
+        <test-method status="PASS" signature="browserOpen()[pri:0, instance:com.cts.SampleProject.App@7d907bac]" name="browserOpen" is-config="true" duration-ms="11023" started-at="2020-08-19T11:28:22Z" finished-at="2020-08-19T11:28:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserOpen -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.cts.SampleProject.App@4883b407]" name="test" duration-ms="23" started-at="2020-08-16T06:57:08Z" finished-at="2020-08-16T06:57:08Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.cts.SampleProject.App@7d907bac]" name="test" duration-ms="15066" started-at="2020-08-19T11:28:33Z" finished-at="2020-08-19T11:28:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.cts.SampleProject.App@4883b407]" name="closeBrowser" is-config="true" duration-ms="152" started-at="2020-08-16T06:57:08Z" finished-at="2020-08-16T06:57:08Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.cts.SampleProject.App@7d907bac]" name="closeBrowser" is-config="true" duration-ms="4132" started-at="2020-08-19T11:28:48Z" finished-at="2020-08-19T11:28:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
